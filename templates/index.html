@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counter</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+body {
+    padding: 45px;
+    text-align: center;
+    color: #eee;
+}
+
+.wrapper {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    display: inline-block;
+    padding-top: 160px;
+    background-color: #343a40;
+    border-radius: 8px;
+}
+
+p {
+    font-size: 18px;
+ }
+
+ span {
+     color: #28a746;
+ }
+
+form {
+    display: inline-block;
+}
+
+button {
+    margin: 1px 1px 1px 1px;
+    display: inline-block;
+}
+
+
+</style>
+
+</head>
+    <body>
+        <div class="wrapper">
+
+            <h1>Page Visit Counter</h1>
+            <p>Times visited: <span>{{ session['count'] }}</span>  Times</p>
+        
+            <form action="/increment" method="POST">
+                <button type='input' class='btn btn-info' action=''>Add 2</button>
+            </form>
+        
+            <form action="/clear" method="POST">
+                <button type="input" class='btn btn-danger'>Reset</button>
+            </form>
+
+        </div>
+    </body>
+</html>
